@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand" href="#"><%= @project_name =%></a>
+  <button class="navbar-toggler"
+          type="button" 
+          data-toggle="collapse" 
+          data-target="#navbarColor02" 
+          aria-controls="navbarColor02" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <% @pagelist.each do |key, val| %>
+        <% if @title.downcase.start_with?(key) then %>
+          <li class="nav-item active">
+            <a class="nav-link" href="<%= key %>"><%= val %><span class="sr-only">(current)</span></a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= key %>"><%= val %></a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</nav>

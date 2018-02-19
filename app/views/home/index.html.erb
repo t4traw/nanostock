@@ -1,0 +1,50 @@
+<div class="text-center">
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">SKU</span>
+      </div>
+      <input id="enterd_sku" type="text" class="form-control form-control-lg" aria-label="">
+      <div class="input-group-append">
+        <span class="input-group-text">Enter</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="separate">
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">品番</th>
+      <th scope="col">品名</th>
+      <th scope="col">在庫</th>
+      <th scope="col" id="head_stock">±</th>
+      <th scope="col">売値</th>
+      <th scope="col">仕入値</th>
+      <th scope="col">発注数</th>
+      <th scope="col" id="head_sku_alias">別品番</th>
+    </tr>
+  </thead>
+  <tbody id="products">
+    <% @items.each do |item| %>
+    <tr>
+      <td><%= item.sku %></th>
+      <td><%= item.name %></td>
+      <td><%= item.stock %></td>
+      <td class="data-stock">
+        <span class="form-group">
+          <input class="form-control form-control-sm" type="text" value="">
+        </span>
+      </td>
+      <td><%= item.sell.to_s.gsub(/\.?0+$/, '') %></td>
+      <td><%= item.buy.to_s.gsub(/\.?0+$/, '') %></td>
+      <td><%= item.lot %></td>
+      <td class="data-sku-alias"><%= item.sku_alias %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script src="/assets/javascripts/home.js"></script>

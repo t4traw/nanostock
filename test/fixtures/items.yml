@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: items
+#
+#  id              :integer          not null, primary key
+#  sku             :string           default(""), not null
+#  name            :string           default(""), not null
+#  sell            :decimal(, )
+#  buy             :decimal(, )
+#  sku_alias       :string
+#  stock           :integer          default(0), not null
+#  company_id      :integer          not null
+#  organization_id :integer          not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  lot             :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

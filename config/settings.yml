@@ -1,0 +1,13 @@
+default: &default
+  message: 'Current settings is Default(Development).'
+  project_name: 'nanostock' # CodeName
+  project_author: 'Masaki Moriyama'
+  project_author_link: ''
+  project_started: '2018'
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  message: 'Current settings is Production.'
