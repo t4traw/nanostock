@@ -608,7 +608,7 @@ if (typeof jQuery === 'undefined') {
       .attr('aria-expanded', true)
 
     this.$trigger
-      .removeClass('collapsed')
+      .removeClass('opened')
       .attr('aria-expanded', true)
 
     this.transitioning = 1
@@ -616,7 +616,7 @@ if (typeof jQuery === 'undefined') {
     var complete = function () {
       this.$element
         .removeClass('collapsing')
-        .addClass('collapse collapsed in')[dimension]('')
+        .addClass('collapse opened in')[dimension]('')
       this.transitioning = 0
       this.$element
         .trigger('shown.bs.collapse')
@@ -648,7 +648,7 @@ if (typeof jQuery === 'undefined') {
       .attr('aria-expanded', false)
 
     this.$trigger
-      .addClass('collapsed')
+      .addClass('opened')
       .attr('aria-expanded', false)
 
     this.transitioning = 1
@@ -657,7 +657,7 @@ if (typeof jQuery === 'undefined') {
       this.transitioning = 0
       this.$element
         .removeClass('collapsing')
-        .removeClass('collapsed')
+        .removeClass('opened')
         .addClass('collapse')
         .trigger('hidden.bs.collapse')
     }
