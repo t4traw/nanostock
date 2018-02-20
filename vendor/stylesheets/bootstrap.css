@@ -3184,6 +3184,10 @@ tbody.collapse.show {
   transition: height 0.35s ease;
 }
 
+.collapsed {
+  display: block;
+}
+
 .dropup,
 .dropdown {
   position: relative;
